@@ -1,0 +1,22 @@
+﻿@model MiniCalculator.Models.Calculator
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Calculator</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("value a")
+    @Html.EditorFor(x => x.a) <br />
+    @Html.Label("value b")
+    @Html.EditorFor(x => x.b)<br />
+
+    <input type="submit" value="+" name="op" />
+    <input type="submit" value="-" name="op" />
+    <input type="submit" value="*" name="op" /> 
+    <input type="submit" value="/" name="op" />
+    <br/>
+
+    <h1> @Html.Label("Result is") @Html.DisplayFor(x => x.result)</h1>
+}
