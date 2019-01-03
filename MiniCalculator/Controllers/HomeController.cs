@@ -14,6 +14,8 @@ namespace MiniCalculator.Controllers
         {
             return View();
         }
+
+        [HttpPost]
         public ActionResult Index(Calculator calculatorModel,string operater)
         {
             if(operater == "+")
